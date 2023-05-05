@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
+const userRoute = require('./api/routes/user');
 // connection to the database 
 
 
@@ -20,7 +21,7 @@ mongoose.Promise = global.Promise;
 
 //end database connection
 
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 app.use('/uploads', express.static('uploads'));
 //apply bodyparser to requests
 app.use(bodyParser.urlencoded({extended: false}));
@@ -41,6 +42,7 @@ app.use((req, res, next)=>{
 // Routes to handle the requests
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
+app.use('/user', userRoute);
 
 app.use((req, res, next)=>{
     const error = new Error('Can not display this content');
