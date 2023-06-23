@@ -10,7 +10,7 @@ const userRoute = require('./api/routes/user');
 // connection to the database 
 
 
-mongoose.connect('mongodb+srv://chakerhenitn:chakerhenitn@nodejsapi.svop4cj.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://111111:222222@nodejsapi.svop4cj.mongodb.net/?retryWrites=true&w=majority', {
 useNewUrlParser: true,
 useUnifiedTopology: true,
 });
